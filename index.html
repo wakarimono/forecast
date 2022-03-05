@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><title>Share your Google Sheets</title></head>
+<body>
+    <table id="output"></table>
+    <script>
+const url = 'https://docs.google.com/spreadsheets/d/1owMJhQ0e5DN_8TI-IwFMoWgFP99wflZNL2PMEY1NxNE/gviz/tq?';
+    fetch(url)
+    .then(res => res.text())
+    .then(rep=>{
+        const data = JSON.parse(rep.substr(47).slice(0,-2));
+        console.log(data)
+        datahtml = JSON. stringify(data) 
+        document.getElementById("output").innerHTML = datahtml;
+
+        
+    })
+
+    </script>
+</body>
+</html>
